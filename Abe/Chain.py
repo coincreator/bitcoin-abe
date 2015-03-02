@@ -382,7 +382,14 @@ class Hirocoin(X11Chain):
 YAC_START_TIME = 1377557832
 
 
-{{COIN_CLASS}}
+class !!coin_name!!(!!chain_type!!):
+    def __init__(chain, **kwargs):
+        Chain.__init__(chain, **kwargs)
+
+    datadir_conf_file_name = 'coin.conf'
+    datadir_rpcport = !!rpc_port!!
+    datadir_p2pport = !!p2p_port!!
+
 
 class ScryptJaneChain(Chain):
     def block_header_hash(chain, header):
